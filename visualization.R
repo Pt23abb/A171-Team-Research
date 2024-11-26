@@ -1,5 +1,7 @@
 library(tidyverse)  #Initializing the tidyverse library
 
+pdf("Visualization.pdf")  #Generating the pdf to see the boxplot and histogram
+
 df <- read.csv("vw.csv")  #Reading the csv file and storing the data set in df variable
 
 x <- df$transmission #Storing Independent variable 
@@ -44,3 +46,5 @@ yn <-dnorm(x, mean=dtMean, sd=dtSd)
 box.size <- diff(h$mids[1:2]) *length(y)
 yn <-yn*box.size
 lines(x, yn, col="blue")
+
+dev.off()
