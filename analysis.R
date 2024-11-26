@@ -7,5 +7,5 @@ x <- df$price
 y<- df$transmission
 #Dependent variable has 3 categories
 
-t.test(y,x)
+irwise.wilcox.test(y,x)
 
